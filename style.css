@@ -1,0 +1,349 @@
+/* 1. Global Reset and Variables */
+
+:root {
+    --primary-color: #0077b6; /* Professional Blue */
+    --secondary-color: #f8f9fa; /* Light grey for section backgrounds */
+    --text-color: #343a40; /* Dark grey for body text */
+    --accent-color: #00b4d8; /* Brighter accent for buttons */
+    --font-family-primary: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: white;
+    /* FIX: Increased padding to safely clear the fixed navigation */
+    padding-top: 85px; 
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Container for max width and centering */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0; /* Vertical spacing for sections */
+}
+
+section:nth-of-type(even) {
+    background-color: var(--secondary-color); /* Zebra-striping effect */
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e9ecef;
+    margin: 0;
+}
+
+/* 2. Header and Navigation */
+
+header#hero {
+    background: var(--primary-color);
+    color: white;
+    padding: 80px 0 100px 0;
+    text-align: center;
+}
+
+.hero-content {
+    padding-top: 50px; /* Space below the fixed nav */
+}
+
+header#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.25rem;
+}
+
+header#hero h2 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+/* Profile Photo Styling */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff30; 
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+.profile-photo img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+
+/* Navigation Bar - CRITICAL FIX */
+nav {
+    position: fixed; /* Ensures it sticks to the viewport */
+    top: 0;          /* Pushes it to the very top */
+    left: 0;
+    width: 100%;
+    z-index: 1000;   /* Ensures it sits above other content */
+    
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+    padding: 15px 0;
+    display: flex;
+    justify-content: center; 
+    position: relative; /* This relative position is needed for the ABSOLUTE positioning of the language switcher inside the NAV */
+}
+
+nav a {
+    color: var(--text-color);
+    padding: 0 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+/* Language Switcher Styles */
+.language-switcher {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.lang-button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid var(--primary-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-button:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.lang-button.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+
+/* Call-to-Action (CTA) Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white !important;
+    padding: 12px 30px;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #0096c7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 3. About Me Section */
+#about p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* 4. Experience & Education Sections */
+
+section h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.job-entry, .education-entry {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.job-entry:hover, .education-entry:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.job-entry h4, .education-entry h4 {
+    margin-top: 0;
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+.job-entry .dates, .education-entry .dates {
+    display: block;
+    color: #6c757d;
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+ul {
+    list-style-type: '👉 ';
+    padding-left: 10px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* 5. Skills Section (Progress Bars & Icons) */
+
+#skills h4 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.soft-skills-header {
+    margin-top: 40px !important;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skills-list span {
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.skills-list i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+/* 6. Contact and Footer */
+
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.contact-detail {
+    font-size: 1.2rem !important;
+}
+
+.contact-detail i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+footer {
+    background-color: var(--text-color);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9rem;
+}
+
+/* 7. Media Queries (Responsiveness) */
+
+@media (max-width: 768px) {
+    /* Lower padding for smaller fixed nav on mobile */
+    body {
+        padding-top: 75px; 
+    }
+    
+    header#hero h1 {
+        font-size: 2.5rem;
+    }
+
+    header#hero h2 {
+        font-size: 1.2rem;
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+
+    nav {
+        padding: 10px 0;
+        flex-wrap: wrap; 
+    }
+
+    nav a {
+        padding: 0 10px;
+        font-size: 0.85rem;
+    }
+
+    .skills-list {
+        justify-content: center;
+    }
+    
+    /* Responsive Language Switcher */
+    .language-switcher {
+        position: static; 
+        margin-top: 10px;
+        justify-content: center;
+        transform: none;
+        width: 100%;
+        order: -1; 
+    }
+}
