@@ -1,70 +1,66 @@
 /* 1. Global Reset and Variables */
 
 :root {
-    /* Primary Colors */
-    --primary-color: #0077b6; /* Professional Blue */
-    --accent-color: #00b4d8; /* Brighter accent for buttons */
-
-    /* Light Mode Base Variables */
-    --secondary-color-light: #f8f9fa; 
-    --text-color-light: #343a40; 
-
-    /* Dark Mode Base Variables */
-    --bg-dark: #121212; /* Very dark background */
-    --bg-secondary-dark: #1e1e1e; /* Card/Even Section background */
-    --text-color-dark: #e0e0e0; /* Light text */
-    --hr-color-dark: #333333;
-    --nav-bg-dark: rgba(30, 30, 30, 0.98);
-
-    /* Dynamic Variables (Default to Light Mode) */
-    --main-bg: white;
-    --section-bg: var(--secondary-color-light);
-    --main-text: var(--text-color-light);
-    --card-bg: white;
-    --nav-bg: rgba(255, 255, 255, 0.98);
-    --hr-color: #e9ecef;
-    --box-shadow-color: rgba(0, 0, 0, 0.08);
-
-    --font-family-primary: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+/* Primary Colors */
+--primary-color: #0077b6; /* Professional Blue */
+--accent-color: #00b4d8; /* Brighter accent for buttons */
+/* Light Mode Base Variables */
+--secondary-color-light: #f8f9fa; 
+--text-color-light: #343a40; 
+/* Dark Mode Base Variables */
+--bg-dark: #121212; /* Very dark background */
+--bg-secondary-dark: #1e1e1e; /* Card/Even Section background */
+--text-color-dark: #e0e0e0; /* Light text */
+--hr-color-dark: #333333;
+--nav-bg-dark: rgba(30, 30, 30, 0.98);
+/* Dynamic Variables (Default to Light Mode) */
+--main-bg: white;
+--section-bg: var(--secondary-color-light);
+--main-text: var(--text-color-light);
+--card-bg: white;
+--nav-bg: rgba(255, 255, 255, 0.98);
+--hr-color: #e9ecef;
+--box-shadow-color: rgba(0, 0, 0, 0.08);
+--font-family-primary: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* ------------------------------------------------ */
 /* DARK MODE STYLES */
 /* Applies if the user's OS prefers dark mode */
 @media (prefers-color-scheme: dark) {
-    :root {
-        --main-bg: var(--bg-dark);
-        --section-bg: var(--bg-secondary-dark);
-        --main-text: var(--text-color-dark);
-        --card-bg: var(--bg-secondary-dark);
-        --nav-bg: var(--nav-bg-dark);
-        --hr-color: var(--hr-color-dark);
-        --box-shadow-color: rgba(255, 255, 255, 0.08);
-    }
+    :root {
+--main-bg: var(--bg-dark);
+--section-bg: var(--bg-secondary-dark);
+--main-text: var(--text-color-dark);
+--card-bg: var(--bg-secondary-dark);
+--nav-bg: var(--nav-bg-dark);
+--hr-color: var(--hr-color-dark);
+--box-shadow-color: rgba(255, 255, 255, 0.08);
+}
 }
 
 /* Overrides for manual toggle (.dark-mode class on <body>) */
 body.dark-mode {
-    --main-bg: var(--bg-dark) !important;
-    --section-bg: var(--bg-secondary-dark) !important;
-    --main-text: var(--text-color-dark) !important;
-    --card-bg: var(--bg-secondary-dark) !important;
-    --nav-bg: var(--nav-bg-dark) !important;
-    --hr-color: var(--hr-color-dark) !important;
-    --box-shadow-color: rgba(255, 255, 255, 0.08) !important;
-
-    color: var(--main-text);
+--main-bg: var(--bg-dark) !important;
+--section-bg: var(--bg-secondary-dark) !important;
+--main-text: var(--text-color-dark) !important;
+--card-bg: var(--bg-secondary-dark) !important;
+--nav-bg: var(--nav-bg-dark) !important;
+--hr-color: var(--hr-color-dark) !important;
+--box-shadow-color: rgba(255, 255, 255, 0.08) !important;
+color: var(--main-text);
 }
 /* ------------------------------------------------ */
 
 
 *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 
 body {
+    margin: 0; /* <<< CORRECTED: Removes default browser margin */
     font-family: var(--font-family-primary);
     line-height: 1.6;
     color: var(--main-text); /* Use variable */
@@ -74,350 +70,349 @@ body {
 }
 
 h1, h2, h3, h4 {
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-    line-height: 1.2;
+margin-bottom: 0.5rem;
+font-weight: 700;
+line-height: 1.2;
 }
 
 a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.3s ease;
+text-decoration: none;
+color: var(--primary-color);
+transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--accent-color);
+color: var(--accent-color);
 }
 
 /* Container for max width and centering */
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+max-width: 1000px;
+margin: 0 auto;
+padding: 0 20px;
 }
 
 section {
-    padding: 40px 0; /* Reduced spacing */
+padding: 40px 0; /* Reduced spacing */
 }
 
 section:nth-of-type(even) {
-    background-color: var(--section-bg); /* Use variable */
+background-color: var(--section-bg); /* Use variable */
 }
 
 hr {
-    border: none;
-    height: 1px;
-    background-color: var(--hr-color); /* Use variable */
-    margin: 0;
+border: none;
+height: 1px;
+background-color: var(--hr-color); /* Use variable */
+margin: 0;
 }
 
 /* 2. Header and Navigation */
 
 header#hero {
-    background: var(--primary-color);
-    color: white;
-    padding: 20px 0 80px 0; 
-    text-align: center;
+background: var(--primary-color);
+color: white;
+padding: 20px 0 80px 0; 
+text-align: center;
 }
 
 .hero-content {
-    padding-top: 0; 
+padding-top: 0; 
 }
 
 header#hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 0.25rem;
+font-size: 3.5rem;
+margin-bottom: 0.25rem;
 }
 
 header#hero h2 {
-    font-size: 1.6rem;
-    font-weight: 300;
-    opacity: 0.9;
-    margin-bottom: 2rem;
+font-size: 1.6rem;
+font-weight: 300;
+opacity: 0.9;
+margin-bottom: 2rem;
 }
 
 /* Profile Photo Styling */
 .profile-photo {
-    width: 150px;
-    height: 150px;
-    background-color: #ffffff30; 
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    border: 3px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; 
+width: 150px;
+height: 150px;
+background-color: #ffffff30; 
+border-radius: 50%;
+margin: 0 auto 20px;
+border: 3px solid white;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden; 
 }
 
 .profile-photo img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
+width: 100%; 
+height: 100%; 
+object-fit: cover; 
 }
 
 
 /* Navigation Bar - NOW RELATIVE */
 nav {
-    position: relative; 
-    top: auto; 
-    left: auto;
-    width: 100%;
-    z-index: 1000; 
-    
-    background-color: var(--nav-bg); /* Use variable */
-    box-shadow: 0 2px 5px var(--box-shadow-color); /* Use variable */
-    
-    padding: 15px 0;
-    display: flex;
-    justify-content: center; 
-    flex-wrap: wrap; 
-    position: relative; 
+position: relative; 
+top: auto; 
+left: auto;
+width: 100%;
+z-index: 1000; 
+
+background-color: var(--nav-bg); /* Use variable */
+box-shadow: 0 2px 5px var(--box-shadow-color); /* Use variable */
+
+padding: 10px 0; /* Optimized: Smaller vertical padding for the whole bar */
+display: flex;
+justify-content: center; 
+flex-wrap: wrap; 
+position: relative; 
 }
 
 nav a {
-    color: var(--main-text); /* Use variable */
-    padding: 0 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.95rem;
+color: var(--main-text); /* Use variable */
+padding: 5px 15px; /* Optimized: Reduced horizontal spacing, added small vertical padding */
+font-weight: 600;
+text-transform: uppercase;
+font-size: 0.95rem;
 }
 
 /* Language Switcher & Dark Mode Toggle Styles */
 .language-switcher {
-    position: static !important;
-    margin-bottom: 15px; 
-    right: auto;
-    top: auto;
-    transform: none;
-    display: flex;
-    gap: 5px;
-    /* Ensure all toggles are aligned */
-    align-items: center; 
-    justify-content: center;
-    padding-bottom: 15px;
+position: static !important;
+margin-bottom: 0; /* Optimized: Reduced to 0 */
+right: auto;
+top: auto;
+transform: none;
+display: flex;
+gap: 5px;
+align-items: center; 
+justify-content: center;
+padding-bottom: 10px; /* Optimized: Reduced from 15px to 10px */
 }
 
 .lang-button {
-    background-color: var(--card-bg); /* Use variable */
-    color: var(--main-text); /* Use variable */
-    border: 1px solid var(--primary-color);
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s, color 0.3s;
-    line-height: 1; /* Fixes alignment for icons/text */
+background-color: var(--card-bg); /* Use variable */
+color: var(--main-text); /* Use variable */
+border: 1px solid var(--primary-color);
+padding: 5px 10px;
+cursor: pointer;
+border-radius: 5px;
+font-weight: 600;
+transition: background-color 0.3s, color 0.3s;
+line-height: 1; /* Fixes alignment for icons/text */
 }
 
 .lang-button:hover {
-    background-color: var(--accent-color);
-    color: white;
+background-color: var(--accent-color);
+color: white;
 }
 
 .lang-button.active {
-    background-color: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
+background-color: var(--primary-color);
+color: white;
+border-color: var(--primary-color);
 }
 
 /* Call-to-Action (CTA) Button */
 .cta-button {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: white !important;
-    padding: 12px 30px;
-    border-radius: 50px; 
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.2s;
+display: inline-block;
+background-color: var(--accent-color);
+color: white !important;
+padding: 12px 30px;
+border-radius: 50px; 
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1px;
+border: none;
+transition: background-color 0.3s ease, transform 0.2s;
 }
 
 .cta-button:hover {
-    background-color: #0096c7;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+background-color: #0096c7;
+transform: translateY(-2px);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 3. About Me Section */
 #about p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem; 
-    text-align: justify;
+font-size: 1.1rem;
+margin-bottom: 1rem; 
+text-align: justify;
 }
 
 /* 4. Experience & Education Sections */
 
 section h3 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px; 
-    color: var(--primary-color);
-    border-bottom: 3px solid var(--accent-color);
-    display: inline-block;
-    padding-bottom: 5px;
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 30px; 
+color: var(--primary-color);
+border-bottom: 3px solid var(--accent-color);
+display: inline-block;
+padding-bottom: 5px;
 }
 
 .job-entry, .education-entry, .publication-entry {
-    background-color: var(--card-bg); /* Use variable */
-    padding: 30px;
-    margin-bottom: 30px;
-    border-left: 5px solid var(--primary-color);
-    box-shadow: 0 3px 10px var(--box-shadow-color); /* Use variable */
-    border-radius: 5px;
-    transition: box-shadow 0.3s ease, background-color 0.3s;
+background-color: var(--card-bg); /* Use variable */
+padding: 30px;
+margin-bottom: 30px;
+border-left: 5px solid var(--primary-color);
+box-shadow: 0 3px 10px var(--box-shadow-color); /* Use variable */
+border-radius: 5px;
+transition: box-shadow 0.3s ease, background-color 0.3s;
 }
 
 .job-entry:hover, .education-entry:hover, .publication-entry:hover {
-    box-shadow: 0 5px 15px var(--box-shadow-color);
+box-shadow: 0 5px 15px var(--box-shadow-color);
 }
 
 .job-entry h4, .education-entry h4, .publication-entry h4 {
-    margin-top: 0;
-    color: var(--primary-color); /* Keep headings the primary color for visibility in dark mode */
-    font-size: 1.4rem;
+margin-top: 0;
+color: var(--primary-color); /* Keep headings the primary color for visibility in dark mode */
+font-size: 1.4rem;
 }
 
 .job-entry .dates, .education-entry .dates {
-    display: block;
-    color: var(--main-text); /* Use main text color (will be light grey in dark mode) */
-    opacity: 0.7; /* Dim the dates slightly */
-    font-style: italic;
-    margin-bottom: 15px;
-    font-size: 0.95rem;
+display: block;
+color: var(--main-text); /* Use main text color (will be light grey in dark mode) */
+opacity: 0.7; /* Dim the dates slightly */
+font-style: italic;
+margin-bottom: 15px;
+font-size: 0.95rem;
 }
 
 ul {
-    list-style-type: '👉 ';
-    padding-left: 10px;
+list-style-type: '👉 ';
+padding-left: 10px;
 }
 
 ul li {
-    margin-bottom: 8px;
+margin-bottom: 8px;
 }
 
 /* 5. Skills Section (Pill Tags) */
 
 #skills h4 {
-    margin-top: 25px;
-    margin-bottom: 15px;
-    color: var(--primary-color);
-    font-size: 1.2rem;
+margin-top: 25px;
+margin-bottom: 15px;
+color: var(--primary-color);
+font-size: 1.2rem;
 }
 
 .soft-skills-header {
-    margin-top: 40px !important;
+margin-top: 40px !important;
 }
 
 .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; 
+display: flex;
+flex-wrap: wrap;
+gap: 10px; 
 }
 
 .skills-list span {
-    background-color: var(--card-bg); /* Use variable */
-    border: 1px solid var(--primary-color);
-    color: var(--main-text); /* Use variable */
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.9rem; 
-    font-weight: 500;
+background-color: var(--card-bg); /* Use variable */
+border: 1px solid var(--primary-color);
+color: var(--main-text); /* Use variable */
+padding: 8px 15px;
+border-radius: 20px;
+font-size: 0.9rem; 
+font-weight: 500;
 }
 
 .skills-list i {
-    margin-right: 5px;
-    color: var(--primary-color);
+margin-right: 5px;
+color: var(--primary-color);
 }
 
 /* 6. Contact and Footer */
 
 #contact {
-    text-align: center;
+text-align: center;
 }
 
 #contact p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
+margin-bottom: 15px;
+font-size: 1.1rem;
 }
 
 .contact-detail {
-    font-size: 1.1rem !important; 
+font-size: 1.1rem !important; 
 }
 
 .contact-detail i {
-    color: var(--primary-color);
-    margin-right: 10px;
+color: var(--primary-color);
+margin-right: 10px;
 }
 
 footer {
-    background-color: var(--text-color-light); 
-    color: white;
-    text-align: center;
-    padding: 25px 0;
-    font-size: 0.9rem;
+background-color: var(--text-color-light); 
+color: white;
+text-align: center;
+padding: 25px 0;
+font-size: 0.9rem;
 }
 
 body.dark-mode footer {
-    background-color: var(--bg-secondary-dark); 
-    color: var(--text-color-dark);
+background-color: var(--bg-secondary-dark); 
+color: var(--text-color-dark);
 }
 
 
 /* 7. Media Queries (Responsiveness) - Mobile Optimizations */
 
 @media (max-width: 768px) {
-    
-    /* 1. Header Text Size */
-    header#hero h1 {
-        font-size: 2.2rem; 
-    }
 
-    header#hero h2 {
-        font-size: 1.1rem; 
-    }
+/* 1. Header Text Size */
+header#hero h1 {
+font-size: 2.2rem; 
+}
 
-    /* 2. Navigation Styling (Stack the links) */
-    nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
-    }
-    
-    nav a {
-        padding: 5px 10px;
-        font-size: 0.9rem;
-        width: 100%; 
-        text-align: center;
-    }
+header#hero h2 {
+font-size: 1.1rem; 
+}
 
-    /* 3. Language Switcher & Dark Mode Toggle */
-    .language-switcher {
-        margin-bottom: 10px;
-        width: 100%;
-        justify-content: center;
-    }
-    
-    /* 4. Section Spacing */
-    section {
-        padding: 30px 0; 
-    }
-    
-    section h3 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-    }
-    
-    /* 5. Skills List */
-    .skills-list {
-        justify-content: center;
-        gap: 8px; 
-    }
+ /* 2. Navigation Styling (Stack the links) */
+ nav {
+flex-direction: column;
+align-items: center;
+padding: 5px 0; /* Optimized: Reduced main nav padding on mobile */
+}
 
-    .skills-list span {
-        font-size: 0.85rem;
-        padding: 6px 12px;
-    }
+nav a {
+padding: 3px 10px; /* Optimized: Reduced vertical padding further on mobile */
+font-size: 0.9rem;
+width: 100%; 
+text-align: center;
+}
+ /* 3. Language Switcher & Dark Mode Toggle */
+ .language-switcher {
+margin-bottom: 10px;
+width: 100%;
+justify-content: center;
+padding-bottom: 5px; /* Added small padding adjustment for mobile */
+}
+
+/* 4. Section Spacing */
+section {
+padding: 30px 0; 
+}
+
+section h3 {
+font-size: 2rem;
+margin-bottom: 20px;
+}
+
+/* 5. Skills List */
+.skills-list {
+justify-content: center;
+gap: 8px; 
+}
+
+.skills-list span {
+font-size: 0.85rem;
+padding: 6px 12px;
+}
 }
