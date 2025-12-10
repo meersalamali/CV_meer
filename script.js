@@ -1,271 +1,329 @@
-/**
- * Language Translation Data
- * The keys match the 'data-key' attributes in the HTML.
- */
-const translations = {
-    en: {
-        // Page Title
-        title_page: "Meer Salam Ali - Computer Science",
-        // Navigation
-        nav_profile: "Profile",
-        nav_experience: "Experience",
-        nav_education: "Education",
-        nav_skills: "Skills",
-        nav_contact: "Contact",
-        // Hero
-        hero_title: "Computer Science Graduate",
-        hero_cta: "Get In Touch",
-        // About
-        about_header: "👤 Profile",
-        about_p1: "Computer Science Graduate and AI Developer. With knowledge of machine learning, I have a strong ability to repair computers in terms of software and hardware and have participated in innovative projects and IT science to improve my skills.",
-        about_p2: "I was a hotel manager for three years and managed all the computer and reception work in the best way. I have participated in various activities and have special seminars to improve myself in the field in which one works.",
-        // Experience
-        experience_header: "💼 Work Experience",
-        job1_title: "Manager & IT professional & Finance Manager",
-        job1_dates: "2023 - Present",
-        job1_li1: "Was the manager of reception, finance and IT departments, overseeing operations for three years.",
-        job1_li2: "Created a financial system in Python to simplify my daily work and manage my finances in a very detailed way.",
-        job1_li3: "Because of my computer and internet skills, I became an IT manager and solved the hotel's problems very well.",
-        job1_li4: "Worked with clients very well, known for the way I interact with them.",
-        job2_title: "IT Volunteer",
-        job2_dates: "2021 - 2022",
-        job2_li1: "Volunteered at PC Net to improve my intelligence in the department of computer parts, computer installation, and surveillance cameras.",
-        job2_li2: "Gained experience in the creation of programs, databases, and use of Office 365.",
-        // Education
-        education_header: "🎓 Education",
-        edu1_degree: "Bachelor of Computer Science",
-        edu1_dates: "2021 - 2025 (Expected)",
-        edu1_uni: "University of Halabja",
-        // Skills
-        skills_header: "🔧 Skills & Languages",
-        skills_core_header: "Core Competencies",
-        skill_proj_mgmt: "Project Management",
-        skill_pr: "Public Relations",
-        skill_teamwork: "Teamwork",
-        skill_time_mgmt: "Time Management",
-        skill_crit_think: "Critical Thinking",
-        skill_leadership: "Leadership",
-        skill_comm: "Effective Communication",
-        skills_tech_header: "Technical Capabilities",
-        skill_tech: "Technical Skills",
-        skill_swhw: "Software & Hardware Skills",
-        skill_net: "Networking",
-        skill_dm: "Digital Marketing",
-        skills_lang_header: "Languages",
-        lang_arabic: "Arabic",
-        lang_kurdish: "Kurdish",
-        lang_english: "English",
-        // Contact
-        contact_header: "✉️ Contact Me",
-        contact_p1: "I am eager to apply my Computer Science knowledge and professional experience to new challenges. Please connect with me!",
-        contact_phone: "Phone:",
-        contact_email: "Email:",
-        contact_location: "Location:",
-        // Footer
-        footer_text: "© 2025 Meer Salam Ali. Built with HTML & CSS."
-    },
-    ku: {
-        // Page Title
-        title_page: "میر سەلام عەلی - زانستی کۆمپیوتەر",
-        // Navigation
-        nav_profile: "پڕۆفایل",
-        nav_experience: "ئەزموون",
-        nav_education: "خوێندن",
-        nav_skills: "تواناکان",
-        nav_contact: "پەیوەندی",
-        // Hero
-        hero_title: "دەرچووی زانستی کۆمپیوتەر",
-        hero_cta: "پەیوەندیم پێوە بکە",
-        // About
-        about_header: "👤 پڕۆفایل",
-        about_p1: "دەرچووی زانستی کۆمپیوتەر و گەشەپێدەری زیرەکی دەستکرد. لەگەڵ شارەزایی لە فێربوونی ئامێرەکان، توانایەکی بەهێزم هەیە بۆ چاککردنەوەی کۆمپیوتەرەکان لەڕووی نەرمەکاڵا و ڕەقەکاڵاوە و بەشداریم کردووە لە پڕۆژەی داهێنەرانە و زانستی ئایتی بۆ باشترکردنی تواناکانم.",
-        about_p2: "بۆ ماوەی سێ ساڵ بەڕێوەبەری هوتێل بووم و هەموو کارەکانی کۆمپیوتەر و پێشوازیم بە باشترین شێوە بەڕێوەبردووە. بەشداریم لە چالاکی جۆراوجۆردا کردووە و کۆڕبەندی تایبەتیم هەبووە بۆ پەرەپێدانی خۆم لەو بوارەی کە تێیدا کار دەکەم.",
-        // Experience
-        experience_header: "💼 ئەزموونی کار",
-        job1_title: "بەڕێوەبەر و شارەزای ئایتی و بەڕێوەبەری دارایی",
-        job1_dates: "2023 - ئێستا",
-        job1_li1: "بەڕێوەبەری بەشەکانی پێشوازی، دارایی و ئایتی بووم، سەرپەرشتیارم کردووە بۆ ماوەی سێ ساڵ.",
-        job1_li2: "سیستەمێکی دارایی بە زمانی پایتۆن دروست کرد بۆ ئاسانکردنی کارە ڕۆژانەییەکانم و بەڕێوەبردنی داراییەکانم بە شێوەیەکی زۆر ورد.",
-        job1_li3: "بەهۆی شارەزایی لە بواری کۆمپیوتەر و ئینتەرنێت، بوومە بەڕێوەبەری ئایتی و کێشەکانی هوتێلەکەم بە باشی چارەسەر کرد.",
-        job1_li4: "بە باشی لەگەڵ میوانەکان کارم کردووە و ناسراوم بە شێوازی مامەڵەکردنم لەگەڵیان.",
-        job2_title: "خۆبەخشی ئایتی",
-        job2_dates: "2021 - 2022",
-        job2_li1: "خۆبەخشانە لە کۆمپانیای پی سی نێت کارم کرد بۆ پەرەپێدانی زانیارییەکانم لە بەشی پارچەکانی کۆمپیوتەر، دامەزراندنی کۆمپیوتەر و کامێرای چاودێری.",
-        job2_li2: "ئەزموون لە دروستکردنی پڕۆگرام، بنکەی دراو و بەکارهێنانی ئۆفیسی 365 بەدەستهێنا.",
-        // Education
-        education_header: "🎓 خوێندن",
-        edu1_degree: "بە کالۆریۆس لە زانستی کۆمپیوتەر",
-        edu1_dates: "2021 - 2025 (چاوەڕوانکراو)",
-        edu1_uni: "زانکۆی هەڵەبجە",
-        // Skills
-        skills_header: "🔧 تواناکان و زمانەکان",
-        skills_core_header: "توانا سەرەکییەکان",
-        skill_proj_mgmt: "بەڕێوەبردنی پرۆژە",
-        skill_pr: "پەیوەندی گشتی",
-        skill_teamwork: "کاری تیمی",
-        skill_time_mgmt: "بەڕێوەبردنی کات",
-        skill_crit_think: "بیرکردنەوەی ڕەخنەیی",
-        skill_leadership: "سەرکردایەتی",
-        skill_comm: "پەیوەندی کارا",
-        skills_tech_header: "توانا تەکنیکییەکان",
-        skill_tech: "توانا تەکنیکییەکان",
-        skill_swhw: "توانای نەرمەکاڵا و ڕەقەکاڵا",
-        skill_net: "تۆڕسازی",
-        skill_dm: "بازاڕکردنی دیجیتاڵی",
-        skills_lang_header: "زمانەکان",
-        lang_arabic: "عەرەبی",
-        lang_kurdish: "کوردی",
-        lang_english: "ئینگلیزی",
-        // Contact
-        contact_header: "✉️ پەیوەندیم پێوە بکە",
-        contact_p1: "من پەرۆشم بۆ بەکارهێنانی زانیارییەکانی زانستی کۆمپیوتەر و ئەزموونی پیشەییم بۆ ڕووبەڕووبوونەوەی ئاستەنگە نوێیەکان. تکایە پەیوەندیم پێوە بکە!",
-        contact_phone: "ژمارەی تەلەفۆن:",
-        contact_email: "ئیمەیڵ:",
-        contact_location: "شوێن:",
-        // Footer
-        footer_text: "© 2025 میر سەلام عەلی. بە HTML و CSS دروست کراوە."
-    },
-    ar: {
-        // Page Title
-        title_page: "مير سلام علي - علوم الحاسوب",
-        // Navigation
-        nav_profile: "الملف الشخصي",
-        nav_experience: "الخبرة",
-        nav_education: "التعليم",
-        nav_skills: "المهارات",
-        nav_contact: "اتصل بي",
-        // Hero
-        hero_title: "خريج علوم الحاسوب",
-        hero_cta: "تواصل معي",
-        // About
-        about_header: "👤 الملف الشخصي",
-        about_p1: "خريج علوم الحاسوب ومطور ذكاء اصطناعي. لدي معرفة بالتعلم الآلي، ولدي قدرة قوية على إصلاح أجهزة الكمبيوتر من حيث البرامج والأجهزة، وقد شاركت في مشاريع مبتكرة وعلوم تكنولوجيا المعلومات لتحسين مهاراتي.",
-        about_p2: "كنت مدير فندق لمدة ثلاث سنوات وأدرت جميع أعمال الكمبيوتر والاستقبال بأفضل طريقة. شاركت في أنشطة مختلفة ولدي ندوات خاصة لتحسين نفسي في المجال الذي أعمل فيه.",
-        // Experience
-        experience_header: "💼 الخبرة العملية",
-        job1_title: "مدير ومهني تكنولوجيا معلومات ومدير مالي",
-        job1_dates: "2023 - حتى الآن",
-        job1_li1: "كنت مدير أقسام الاستقبال والمالية وتكنولوجيا المعلومات، أشرف على العمليات لمدة ثلاث سنوات.",
-        job1_li2: "أنشأت نظامًا ماليًا بلغة بايثون لتبسيط عملي اليومي وإدارة أموالي بطريقة مفصلة للغاية.",
-        job1_li3: "بسبب مهاراتي في الكمبيوتر والإنترنت، أصبحت مديرًا لتكنولوجيا المعلومات وحللت مشاكل الفندق بشكل جيد للغاية.",
-        job1_li4: "عملت بشكل جيد مع العملاء، ومشهور بطريقة تفاعلي معهم.",
-        job2_title: "متطوع في تكنولوجيا المعلومات",
-        job2_dates: "2021 - 2022",
-        job2_li1: "تطوعت في شركة PC Net لتحسين معرفتي في قسم قطع غيار الكمبيوتر، وتركيب الكمبيوتر، وكاميرات المراقبة.",
-        job2_li2: "اكتسبت خبرة في إنشاء البرامج وقواعد البيانات واستخدام Office 365.",
-        // Education
-        education_header: "🎓 التعليم",
-        edu1_degree: "بكالوريوس في علوم الحاسوب",
-        edu1_dates: "2021 - 2025 (متوقع)",
-        edu1_uni: "جامعة حلبجة",
-        // Skills
-        skills_header: "🔧 المهارات واللغات",
-        skills_core_header: "الكفاءات الأساسية",
-        skill_proj_mgmt: "إدارة المشاريع",
-        skill_pr: "العلاقات العامة",
-        skill_teamwork: "العمل الجماعي",
-        skill_time_mgmt: "إدارة الوقت",
-        skill_crit_think: "التفكير النقدي",
-        skill_leadership: "القيادة",
-        skill_comm: "التواصل الفعال",
-        skills_tech_header: "القدرات التقنية",
-        skill_tech: "المهارات التقنية",
-        skill_swhw: "مهارات البرامج والأجهزة",
-        skill_net: "الشبكات",
-        skill_dm: "التسويق الرقمي",
-        skills_lang_header: "اللغات",
-        lang_arabic: "العربية",
-        lang_kurdish: "الكردية",
-        lang_english: "الإنجليزية",
-        // Contact
-        contact_header: "✉️ اتصل بي",
-        contact_p1: "أنا حريص على تطبيق معرفتي في علوم الحاسوب وخبرتي المهنية لمواجهة تحديات جديدة. الرجاء التواصل معي!",
-        contact_phone: "هاتف:",
-        contact_email: "البريد الإلكتروني:",
-        contact_location: "الموقع:",
-        // Footer
-        footer_text: "© 2025 مير سلام علي. بنيت باستخدام HTML و CSS."
-    }
-};
-
-/**
- * Main function to set up language switching
- */
 document.addEventListener('DOMContentLoaded', () => {
-    const langButtons = document.querySelectorAll('.lang-button');
-    const elements = document.querySelectorAll('[data-key]');
-    const body = document.body;
-    const title = document.querySelector('title');
+    // -----------------------------------------------------
+    // Dark Mode Toggle Logic
+    // -----------------------------------------------------
+    const toggle = document.getElementById('darkModeToggle');
+    const body = document.body;
 
-    // Attempt to get the language from localStorage, otherwise default to English
-    let currentLang = localStorage.getItem('portfolioLang') || 'en'; 
+    // A defensive check to ensure the toggle button exists before using it.
+    if (toggle) {
+        const currentMode = localStorage.getItem('theme');
+        
+        // 1. Check for stored preference or system preference
+        // This is used for initial loading when no localStorage preference is set.
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    /**
-     * Updates the content based on the selected language
-     * @param {string} lang The language code ('en', 'ku', 'ar')
-     */
-    function updateContent(lang) {
-        // 1. Update text content
-        elements.forEach(element => {
-            const key = element.getAttribute('data-key');
-            if (translations[lang] && translations[lang][key]) {
-                const iconClass = element.getAttribute('data-icon');
-                
-                // Update text content
-                element.textContent = translations[lang][key];
-                
-                // Prepend the icon back if it existed
-                if (iconClass) {
-                    const iconElement = document.createElement('i');
-                    iconElement.className = iconClass;
-                    element.prepend(iconElement, ' ');
-                }
-            }
-        });
+        // Initial Load: Set theme based on localStorage or system preference
+        if (currentMode === 'dark') {
+            body.classList.add('dark-mode');
+            toggle.innerHTML = '<i class="fas fa-sun"></i>'; // Display sun icon for dark mode
+        } else if (currentMode === 'light') {
+            body.classList.remove('dark-mode');
+            toggle.innerHTML = '<i class="fas fa-moon"></i>'; // Display moon icon for light mode
+        } else if (prefersDark) {
+            // If no preference stored, and system prefers dark
+            body.classList.add('dark-mode'); // Optional: Add class if CSS uses it
+            toggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            // Default to light (or system is light)
+            body.classList.remove('dark-mode');
+            toggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
 
-        // 2. Update page title
-        if (translations[lang] && translations[lang]['title_page']) {
-             title.textContent = translations[lang]['title_page'];
-        }
+        // 2. Click Handler: Toggle the mode on click
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
 
-        // 3. Handle RTL for Arabic and Kurdish (and LTR for English)
-        if (lang === 'ar' || lang === 'ku') {
-            body.style.direction = 'rtl';
-        } else {
-            body.style.direction = 'ltr';
-        }
-        
-        // 4. Update active button state
-        langButtons.forEach(button => {
-            button.classList.remove('active');
-            if (button.id === `lang-${lang}`) {
-                button.classList.add('active');
-            }
-        });
-        
-        // 5. Save preference and update current lang
-        localStorage.setItem('portfolioLang', lang);
-        currentLang = lang;
-    }
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                toggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                localStorage.setItem('theme', 'light');
+                toggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+    }
+    
+    // -----------------------------------------------------
+    // Language Switcher Logic (Internationalization/i18n)
+    // -----------------------------------------------------
+    
+    // Define the translations data structure
+    // NOTE: This structure MUST contain all the data-key attributes from your HTML.
+    const translations = {
+        'en': {
+            'title_page': 'Meer Salam Ali - Computer Science',
+            'nav_profile': 'Profile',
+            'nav_experience': 'Experience',
+            'nav_publications': 'Publications',
+            'nav_education': 'Education',
+            'nav_skills': 'Skills',
+            'nav_contact': 'Contact',
+            'hero_title': 'Computer Science - IT',
+            'hero_cta': 'Get In Touch',
+            'about_header': '👤 PROFILE',
+            'about_p1': 'Computer Science graduate, AI developer, and published researcher with experience in machine learning, speech-based datasets, computer repair, networking, and IT support.',
+            'about_p2': 'Published a dataset paper in Data in Brief journal focused on classifying phrases and sentences (statements, questions, exclamations) based on sound pitch.',
+            'about_p3': 'Former Hotel Manager at Grandiva Hotel with over four years of experience in managing operations, leading teams, and overseeing all computer and administrative systems.',
+            'experience_header': '💼 Experience',
+            'job1_title': 'Grandiva Hotel - Hotel Manager',
+            'job1_dates': '2022 - 2025',
+            'job1_li1': 'Managed hotel operations, reception, and administrative systems.',
+            'job1_li2': 'Oversaw all computer systems, POS systems, and hotel databases.',
+            'job1_li3': 'Provided customer service leadership and team supervision.',
+            'job1_li4': 'Improved workflow efficiency and guest satisfaction.',
+            'projects_header': '🛠️ Projects',
+            'proj1_title': 'Technical & Digital Solutions Support',
+            'proj1_dates': '2021 - 2025',
+            'proj1_li1': 'Repaired and maintained computer software & hardware. Provided networking setup, internet configuration, and troubleshooting.',
+            'proj1_li2': 'Assisted with technical projects and digital solutions. Installed operating systems, antivirus tools, and network hardware.',
+            'publications_header': '📚 PUBLICATIONS',
+            'pub1_title': 'A Dataset for Classifying Phrases and Sentences Into Statements, Questions, or Exclamations Based on Sound Pitch',
+            'pub1_li1': 'Developed and published a unique linguistic and audio-based dataset.',
+            'pub1_li2': 'Focused on speech intonation, semantic labeling, and machine learning preparation.',
+            'pub1_li3': 'Contributed to research in NLP, sound analysis, and AI classification.',
+            'pub1_citation': '**Citation:** M. S. Ali, "A dataset for classifying phrases and sentences into statements, questions, or exclamations based on sound pitch," Data in Brief, 2024.',
+            'education_header': '🎓 EDUCATION',
+            // --- UPDATED KEY ---
+            'edu1_degree': 'Computer Science',
+            'edu1_dates': 'Bachelor of Computer Science 2021 - 2025',
+            // -------------------
+            'edu1_uni': 'University Of Halabja',
+            'skills_header': '🔧 SKILLS & LANGUAGES',
+            'skills_core_header': 'SOFT SKILLS',
+            'skill_leadership': 'Leadership',
+            'skill_teamwork': 'Teamwork',
+            'skill_pr': 'Public Relations',
+            'skill_time_mgmt': 'Time Management',
+            'skill_comm': 'Communication',
+            'skill_crit_think': 'Critical Thinking',
+            'skills_tech_header': 'TECH SKILLS',
+            'skill_ml_ds': 'Machine Learning & Dataset Development',
+            'skill_swhw': 'Software & Hardware Repair',
+            'skill_net': 'Networking',
+            'skill_dm': 'Digital Marketing',
+            'skill_ai': 'AI Development',
+            'skill_troubleshoot': 'Technical Troubleshooting',
+            'skill_proj_mgmt': 'Project Management',
+            'skills_lang_header': 'LANGUAGES',
+            'lang_kurdish': 'Kurdish',
+            'lang_arabic': 'Arabic',
+            'lang_english': 'English',
+            'contact_header': '✉️ CONTACT',
+            'contact_p1': 'I am eager to apply my Computer Science knowledge and professional experience to new challenges. Please connect with me!',
+            'contact_phone': 'Phone:',
+            'contact_email': 'Email Address:',
+            'contact_location': 'Address:',
+            'contact_website': 'Website:',
+            'footer_text': '© 2025 Meer Salam Ali. Built with HTML & CSS.',
+        },
+        'ku': { // Kurdish translations (Placeholder/Example)
+            'title_page': 'میر سەلام عەلی - زانستی کۆمپیوتەر',
+            'nav_profile': 'پرۆفایل',
+            'nav_experience': 'ئەزموون',
+            'nav_publications': 'بڵاوکراوەکان',
+            'nav_education': 'خوێندن',
+            'nav_skills': 'تواناکان',
+            'nav_contact': 'پەیوەندی',
+            'hero_title': 'زانستی کۆمپیوتەر - ئای تی',
+            'hero_cta': 'پەیوەندی بکە',
+            'about_header': '👤 پرۆفایل',
+            'about_p1': 'دەرچووی زانستی کۆمپیوتەر، پەرەپێدەری AI، و توێژەرێکی بڵاوکراوە لەگەڵ ئەزموون لە فێربوونی ئامێر، داتاسێتی دەنگی، چاککردنەوەی کۆمپیوتەر، تۆڕسازی، و پاڵپشتی ئای تی.',
+            'about_p2': 'توێژینەوەیەکی داتاسێتی بڵاوکردۆتەوە لە گۆڤاری Data in Brief کە تایبەتە بە پۆلێنکردنی ڕستە و دەستەواژەکان (لێدوان، پرسیار، هەستبڕکێ) لەسەر بنەمای ئاهەنگی دەنگ.',
+            'about_p3': 'بەڕێوەبەری پێشووی هۆتێل لە گراندیڤا هۆتێل لەگەڵ زیاتر لە چوار ساڵ ئەزموون لە بەڕێوەبردنی کارەکان، سەرکردایەتی تیمەکان، و سەرپەرشتیکردنی هەموو سیستەمە کۆمپیوتەر و کارگێڕییەکان.',
+            'experience_header': '💼 ئەزموون',
+            'job1_title': 'گراندیڤا هۆتێل - بەڕێوەبەری هۆتێل',
+            'job1_dates': '2022 - 2025',
+            'job1_li1': 'بەڕێوەبردنی کارەکانی هۆتێل، پێشوازی، و سیستەمە کارگێڕییەکان.',
+            'job1_li2': 'سەرپەرشتیکردنی هەموو سیستەمە کۆمپیوتەرەکان، سیستەمی POS، و داتابەیسەکانی هۆتێل.',
+            'job1_li3': 'دابینکردنی سەرکردایەتی خزمەتگوزاری کڕیار و سەرپەرشتیکردنی تیم.',
+            'job1_li4': 'باشترکردنی کارایی پڕۆسەی کار و ڕەزامەندی میوان.',
+            'projects_header': '🛠️ پڕۆژەکان',
+            'proj1_title': 'پاڵپشتی چارەسەرە تەکنیکی و دیجیتاڵییەکان',
+            'proj1_dates': '2021 - 2025',
+            'proj1_li1': 'چاککردنەوە و پاراستنی نەرمامێر و ڕەقامێری کۆمپیوتەر. دابینکردنی تۆڕسازی، ڕێکخستنی ئینتەرنێت، و چارەسەرکردنی کێشەکان.',
+            'proj1_li2': 'هاوکاریکردن لە پڕۆژە تەکنیکی و چارەسەرە دیجیتاڵییەکان. دامەزراندنی سیستەمی کارپێکردن، ئامرازەکانی دژەڤایرۆس، و ڕەقامێری تۆڕ.',
+            'publications_header': '📚 بڵاوکراوەکان',
+            'pub1_title': 'داتاسێتێک بۆ پۆلێنکردنی دەستەواژە و ڕستەکان بۆ لێدوان، پرسیار، یان هەستبڕکێ لەسەر بنەمای ئاهەنگی دەنگ',
+            'pub1_li1': 'پەرەپێدان و بڵاوکردنەوەی داتاسێتێکی ناوازەی زمانەوانی و دەنگی.',
+            'pub1_li2': 'تەرکیزکردن لەسەر ئاهەنگی قسەکردن، ناونیشانکردنی واتایی، و ئامادەکردنی فێربوونی ئامێر.',
+            'pub1_li3': 'بەشداری لە توێژینەوەکانی NLP، شیکاری دەنگ، و پۆلێنکردنی AI.',
+            'pub1_citation': '**سەرچاوە:** M. S. Ali, "A dataset for classifying phrases and sentences into statements, questions, or exclamations based on sound pitch," Data in Brief, 2024.',
+            'education_header': '🎓 خوێندن',
+            // --- UPDATED KEY ---
+            'edu1_degree': 'زانستی کۆمپیوتەر',
+            'edu1_dates': 'بەشی زانستی کۆمپیوتەر 2021 - 2025',
+            // -------------------
+            'edu1_uni': 'زانکۆی هەڵەبجە',
+            'skills_header': '🔧 تواناکان و زمانەکان',
+            'skills_core_header': 'توانا نەرمەکان',
+            'skill_leadership': 'سەرکردایەتی',
+            'skill_teamwork': 'کاری تیمی',
+            'skill_pr': 'پەیوەندی گشتی',
+            'skill_time_mgmt': 'بەڕێوەبردنی کات',
+            'skill_comm': 'پەیوەندی',
+            'skill_crit_think': 'بیرکردنەوەی ڕەخنەگرانە',
+            'skills_tech_header': 'توانا تەکنیکییەکان',
+            'skill_ml_ds': 'فێربوونی ئامێر و پەرەپێدانی داتاسێت',
+            'skill_swhw': 'چاککردنەوەی نەرمامێر و ڕەقامێر',
+            'skill_net': 'تۆڕسازی',
+            'skill_dm': 'بازاڕکردنی دیجیتاڵی',
+            'skill_ai': 'پەرەپێدانی AI',
+            'skill_troubleshoot': 'چارەسەرکردنی تەکنیکی',
+            'skill_proj_mgmt': 'بەڕێوەبردنی پڕۆژە',
+            'skills_lang_header': 'زمانەکان',
+            'lang_kurdish': 'کوردی',
+            'lang_arabic': 'عەرەبی',
+            'lang_english': 'ئینگلیزی',
+            'contact_header': '✉️ پەیوەندی',
+            'contact_p1': 'من زۆر حەز دەکەم زانستی کۆمپیوتەر و ئەزموونی پیشەیی خۆم بۆ بەربەستە نوێیەکان بەکاربهێنم. تکایە پەیوەندیم پێوە بکە!',
+            'contact_phone': 'ژمارەی تەلەفۆن:',
+            'contact_email': 'ناونیشانی ئیمەیڵ:',
+            'contact_location': 'ناونیشان:',
+            'contact_website': 'ماڵپەڕ:',
+            'footer_text': '© 2025 میر سەلام عەلی. بە HTML و CSS دروست کراوە.',
+        },
+        'ar': { // Arabic translations (Placeholder/Example)
+            'title_page': 'مير سلام علي - علوم الحاسوب',
+            'nav_profile': 'السيرة الذاتية',
+            'nav_experience': 'الخبرة',
+            'nav_publications': 'المنشورات',
+            'nav_education': 'التعليم',
+            'nav_skills': 'المهارات',
+            'nav_contact': 'اتصل بي',
+            'hero_title': 'علوم الحاسوب - تكنولوجيا المعلومات',
+            'hero_cta': 'تواصل الآن',
+            'about_header': '👤 نبذة شخصية',
+            'about_p1': 'خريج علوم الحاسوب، ومطور للذكاء الاصطناعي، وباحث منشور ولديه خبرة في التعلم الآلي، ومجموعات البيانات الصوتية، وإصلاح أجهزة الكمبيوتر، والشبكات، والدعم الفني لتكنولوجيا المعلومات.',
+            'about_p2': 'نشر ورقة بيانات في مجلة Data in Brief تركز على تصنيف العبارات والجمل (البيانات، الأسئلة، التعجب) بناءً على نبرة الصوت.',
+            'about_p3': 'مدير فندق سابق في فندق جرانديفا بخبرة تزيد عن أربع سنوات في إدارة العمليات، وقيادة الفرق، والإشراف على جميع أنظمة الكمبيوتر والأنظمة الإدارية.',
+            'experience_header': '💼 الخبرة',
+            'job1_title': 'فندق جرانديفا - مدير فندق',
+            'job1_dates': '2022 - 2025',
+            'job1_li1': 'إدارة عمليات الفندق والاستقبال والأنظمة الإدارية.',
+            'job1_li2': 'الإشراف على جميع أنظمة الكمبيوتر وأنظمة نقاط البيع وقواعد بيانات الفندق.',
+            'job1_li3': 'توفير قيادة خدمة العملاء وإشراف الفريق.',
+            'job1_li4': 'تحسين كفاءة سير العمل ورضا النزلاء.',
+            'projects_header': '🛠️ المشاريع',
+            'proj1_title': 'الدعم الفني والحلول الرقمية',
+            'proj1_dates': '2021 - 2025',
+            'proj1_li1': 'إصلاح وصيانة برامج وأجهزة الكمبيوتر. توفير إعداد الشبكات وتكوين الإنترنت واستكشاف الأخطاء وإصلاحها.',
+            'proj1_li2': 'المساعدة في المشاريع التقنية والحلول الرقمية. تثبيت أنظمة التشغيل وأدوات مكافحة الفيروسات وأجهزة الشبكة.',
+            'publications_header': '📚 المنشورات',
+            'pub1_title': 'مجموعة بيانات لتصنيف العبارات والجمل إلى بيانات أو أسئلة أو تعجب بناءً على نبرة الصوت',
+            'pub1_li1': 'تطوير ونشر مجموعة بيانات لغوية وصوتية فريدة من نوعها.',
+            'pub1_li2': 'التركيز على نغمة الكلام، والتسمية الدلالية، والتحضير للتعلم الآلي.',
+            'pub1_li3': 'المساهمة في البحث في معالجة اللغات الطبيعية وتحليل الصوت وتصنيف الذكاء الاصطناعي.',
+            'pub1_citation': '**اقتباس:** م. س. علي، "مجموعة بيانات لتصنيف العبارات والجمل إلى بيانات أو أسئلة أو تعجب بناءً على نبرة الصوت،" Data in Brief، 2024.',
+            'education_header': '🎓 التعليم',
+            // --- UPDATED KEY ---
+            'edu1_degree': 'علوم الحاسوب',
+            'edu1_dates': 'بكالوريوس علوم الحاسوب 2021 - 2025',
+            // -------------------
+            'edu1_uni': 'جامعة حلبجة',
+            'skills_header': '🔧 المهارات واللغات',
+            'skills_core_header': 'المهارات الشخصية',
+            'skill_leadership': 'القيادة',
+            'skill_teamwork': 'العمل الجماعي',
+            'skill_pr': 'العلاقات العامة',
+            'skill_time_mgmt': 'إدارة الوقت',
+            'skill_comm': 'التواصل',
+            'skill_crit_think': 'التفكير النقدي',
+            'skills_tech_header': 'المهارات التقنية',
+            'skill_ml_ds': 'التعلم الآلي وتطوير مجموعة البيانات',
+            'skill_swhw': 'إصلاح البرامج والأجهزة',
+            'skill_net': 'الشبكات',
+            'skill_dm': 'التسويق الرقمي',
+            'skill_ai': 'تطوير الذكاء الاصطناعي',
+            'skill_troubleshoot': 'استكشاف الأخطاء وإصلاحها فنيًا',
+            'skill_proj_mgmt': 'إدارة المشاريع',
+            'skills_lang_header': 'اللغات',
+            'lang_kurdish': 'الكردية',
+            'lang_arabic': 'العربية',
+            'lang_english': 'الإنجليزية',
+            'contact_header': '✉️ اتصل بي',
+            'contact_p1': 'أنا حريص على تطبيق معرفتي في علوم الحاسوب وخبرتي المهنية لمواجهة التحديات الجديدة. يرجى التواصل معي!',
+            'contact_phone': 'رقم الهاتف:',
+            'contact_email': 'البريد الإلكتروني:',
+            'contact_location': 'العنوان:',
+            'contact_website': 'الموقع الإلكتروني:',
+            'footer_text': '© 2025 مير سلام علي. تم الإنشاء باستخدام HTML و CSS.',
+        }
+    };
 
-    /**
-     * Store initial icon classes before translation removes them from textContent.
-     */
-    elements.forEach(element => {
-        const iconElement = element.querySelector('i');
-        if (iconElement) {
-            element.setAttribute('data-icon', iconElement.className);
-        }
-    });
+    // Function to apply translations
+    function setLanguage(lang) {
+        // 1. Update text content for all data-key elements
+        document.querySelectorAll('[data-key]').forEach(element => {
+            const key = element.getAttribute('data-key');
+            if (translations[lang] && translations[lang][key]) {
+                // Check if the element contains Font Awesome icons to preserve them
+                if (element.querySelector('.fas') || element.querySelector('.fa')) {
+                     // Preserve icon, replace only text nodes
+                    const icon = element.querySelector('.fas, .fa');
+                    element.textContent = translations[lang][key];
+                    if (icon) {
+                        element.prepend(icon);
+                    }
+                } else if (element.tagName === 'A' && key.startsWith('nav_')) {
+                    // For navigation links, only update the text, preserve the href
+                    element.textContent = translations[lang][key];
+                } else if (element.tagName === 'TITLE') {
+                    // Handle the title tag separately
+                    document.title = translations[lang][key];
+                } else if (key === 'pub1_citation') {
+                    // For citation, handle the anchor tag separately
+                    const anchor = element.querySelector('a');
+                    element.innerHTML = translations[lang][key];
+                    if (anchor) {
+                         // Re-insert the original link to prevent breaking the DOI link
+                         element.appendChild(anchor);
+                    }
+                } else {
+                    element.textContent = translations[lang][key];
+                }
+            }
+        });
+        
+        // 2. Set active class on language buttons
+        document.querySelectorAll('.lang-button').forEach(button => {
+            if (button.id.includes('lang-')) {
+                button.classList.remove('active');
+                if (button.id === `lang-${lang}`) {
+                    button.classList.add('active');
+                }
+            }
+        });
 
-    // Add event listeners to the language buttons
-    langButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const lang = button.id.replace('lang-', '');
-            updateContent(lang);
-        });
-    });
+        // 3. Store the preference
+        localStorage.setItem('lang', lang);
+    }
+    
+    // 4. Attach event listeners to language buttons
+    document.querySelectorAll('.lang-button').forEach(button => {
+        if (button.id.includes('lang-')) {
+            button.addEventListener('click', () => {
+                const lang = button.id.replace('lang-', '');
+                setLanguage(lang);
+                
+                // Add direction attribute for right-to-left languages (Arabic)
+                if (lang === 'ar' || lang === 'ku') { // Assuming Kurdish is also RTL or handled similarly
+                    document.documentElement.setAttribute('dir', 'rtl');
+                } else {
+                    document.documentElement.setAttribute('dir', 'ltr');
+                }
+            });
+        }
+    });
 
-    // Initialize the content in the user's preferred or default language
-    updateContent(currentLang);
+    // 5. Initial language load
+    const storedLang = localStorage.getItem('lang') || 'en'; // Default to English
+    setLanguage(storedLang);
+    
+    // Set initial dir attribute based on stored language
+    if (storedLang === 'ar' || storedLang === 'ku') {
+        document.documentElement.setAttribute('dir', 'rtl');
+    } else {
+        document.documentElement.setAttribute('dir', 'ltr');
+    }
 });
