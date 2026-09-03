@@ -1,279 +1,562 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-key="title_page">Meer Salam Ali - Computer Science</title>
-        <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header id="hero">
-      <nav>
-        <div class="language-switcher">
-          <button id="lang-en" class="lang-button active">EN</button>
-          <button id="lang-ku" class="lang-button">KU</button>
-          <button id="lang-ar" class="lang-button">AR</button>
-          <button id="darkModeToggle" class="lang-button" aria-label="Toggle Dark Mode">
-            <i class="fas fa-moon"></i>
-          </button>
-        </div>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Meer Salam Ali - Computer Science graduate, AI developer, web application developer and published researcher based in Sulaimanyah, Iraq." />
+    <meta name="author" content="Meer Salam Ali" />
+    <meta name="theme-color" content="#0b1b3a" />
 
-        <a href="#about" data-key="nav_profile">Profile</a>
-        <a href="#experience" data-key="nav_experience">Experience</a>
-        <a href="#publications" data-key="nav_publications">Publications</a>
-        <a href="#education" data-key="nav_education">Education</a>
-        <a href="#skills" data-key="nav_skills">Skills</a>
-        <a href="#contact" data-key="nav_contact">Contact</a>
-      </nav>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Meer Salam Ali &mdash; Computer Science &amp; IT" />
+    <meta property="og:description" content="AI developer, web application developer and published researcher." />
+    <meta property="og:image" content="profile.png" />
 
-      <div class="hero-content">
-        <h1>MEER SALAM ALI</h1>
-        <h2 data-key="hero_title">Computer Science - IT</h2>
+    <title data-key="title_page">Meer Salam Ali &mdash; Computer Science &amp; IT</title>
 
-        <div class="profile-photo">
-          <img src="meer.png" alt="Meer Salam Ali Professional Photo" />
-        </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Noto+Kufi+Arabic:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-        <a href="#contact" class="cta-button" data-key="hero_cta"
-          >Get In Touch</a
-        >
-        </div>
-    </header>
+  <body>
+    <!-- Reading progress bar -->
+    <div class="scroll-progress"><span id="scrollBar"></span></div>
 
-    <section id="about">
-      <div class="container">
-        <h3 data-key="about_header">👤 PROFILE</h3>
-        <p data-key="about_p1">
-          Computer Science graduate, AI developer, and published researcher with 
-           experience in machine learning, speech-based datasets, computer repair, 
-           networking, and IT support.
-        </p>
-        <p data-key="about_p2">
-           Published a dataset paper in Data in Brief journal focused on classifying phrases 
-           and sentences (statements, questions, exclamations) based on sound pitch.
-        </p>
-        <p data-key="about_p3">
-           Former Hotel Manager at Grandiva Hotel with over four years of experience in managing 
-           operations, leading teams, and overseeing all computer and administrative systems.
-        </p>
-        </div>
-    </section>
+    <!-- ============ NAVIGATION ============ -->
+    <header class="site-nav" id="siteNav">
+      <div class="nav-inner">
+        <a href="#hero" class="brand" aria-label="Meer Salam Ali - home">
+          <span class="brand-mark">MS</span>
+          <span class="brand-text">
+            <strong data-key="brand_name">Meer Salam Ali</strong>
+            <small data-key="brand_sub">Computer Science &middot; IT</small>
+          </span>
+        </a>
 
-    <hr />
+        <nav class="nav-links" id="navLinks">
+          <a href="#about" data-key="nav_profile">Profile</a>
+          <a href="#experience" data-key="nav_experience">Experience</a>
+          <a href="#projects" data-key="nav_projects">Projects</a>
+          <a href="#publications" data-key="nav_publications">Publications</a>
+          <a href="#education" data-key="nav_education">Education</a>
+          <a href="#skills" data-key="nav_skills">Skills</a>
+          <a href="#contact" data-key="nav_contact">Contact</a>
+        </nav>
 
-    <section id="experience">
-      <div class="container">
-        <h3 data-key="experience_header">💼 Experience</h3>
+        <div class="nav-tools">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button id="lang-en" class="lang-button active" type="button">EN</button>
+            <button id="lang-ku" class="lang-button" type="button">KU</button>
+            <button id="lang-ar" class="lang-button" type="button">AR</button>
+          </div>
+          <button id="darkModeToggle" class="icon-button" type="button" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button id="menuToggle" class="icon-button menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
 
-        <article class="job-entry">
-          <h4 data-key="job1_title">
-            Grandiva Hotel - Hotel Manager
-          </h4>
-          <p class="dates">
-            <span data-key="job1_dates">2022 - 2025</span>
-          </p>
-          <ul>
-            <li data-key="job1_li1">
-              Managed hotel operations, reception, and administrative systems.
-            </li>
-            <li data-key="job1_li2">
-              Oversaw all computer systems, POS systems, and hotel databases.
-            </li>
-            <li data-key="job1_li3">
-              Provided customer service leadership and team supervision.
-            </li>
-            <li data-key="job1_li4">
-              Improved workflow efficiency and guest satisfaction.
-            </li>
-          </ul>
-        </article>
-        
-        <h3 data-key="projects_header">🛠️ Projects</h3>
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+        <span class="orb orb-3"></span>
+        <span class="hero-grid"></span>
+      </div>
 
-        <article class="project-entry">
-          <h4 data-key="proj1_title">Technical & Digital Solutions Support</h4>
-          <p class="dates">
-            <span data-key="proj1_dates">2021 - 2025</span>
-          </p>
-          <ul>
-            <li data-key="proj1_li1">
-              Repaired and maintained computer software & hardware. Provided networking setup, internet configuration, and troubleshooting.
-            </li>
-            <li data-key="proj1_li2">
-              Assisted with technical projects and digital solutions. Installed operating systems, antivirus tools, and network hardware.
-            </li>
-          </ul>
-        </article>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="pill-badge">
+            <span class="dot"></span>
+            <span data-key="hero_badge">Open to new opportunities</span>
+          </p>
 
-      </div>
-    </section>
+          <h1 class="hero-name">
+            <span data-key="hero_first">MEER SALAM</span>
+            <span class="gradient-text" data-key="hero_last">ALI</span>
+          </h1>
 
-    <hr />
+          <h2 class="hero-role" data-key="hero_title">
+            Computer Science &middot; AI &amp; Web Application Developer
+          </h2>
 
-    <section id="publications">
-      <div class="container">
-        <h3 data-key="publications_header">📚 PUBLICATIONS</h3>
+          <p class="hero-lead" data-key="hero_lead">
+            Published researcher in speech and machine-learning datasets, builder of
+            database-driven web applications, and an experienced IT and operations professional.
+          </p>
 
-        <article class="publication-entry">
-          <h4 data-key="pub1_title">
-                A Dataset for Classifying Phrases and Sentences Into Statements, Questions, or Exclamations Based on Sound Pitch
-           </h4>
-<p class="journal">Data in Brief Journal</p>
-          <ul>
-<li data-key="pub1_li1">
-Developed and published a unique linguistic and audio-based dataset.
-            </li>
-            <li data-key="pub1_li2">
-              Focused on speech intonation, semantic labeling, and machine learning preparation.
-            </li>
-            <li data-key="pub1_li3">
-              Contributed to research in NLP, sound analysis, and AI classification.
-            </li>
-             <li data-key="pub1_citation">
-                **Citation:** M. S. Ali, "A dataset for classifying phrases and sentences into statements, questions, or exclamations based on sound pitch," Data in Brief, 2024.
-                (<a href="https://doi.org/10.1016/j.dib.2025.111826" target="_blank">https://doi.org/10.1016/j.dib.2025.111826</a>)
-             </li>
-          </ul>
-      </div>
-    </section>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span data-key="hero_cta">Get In Touch</span>
+            </a>
+            <a
+              href="Meer_Salam_Ali%20(IT%20&amp;%20full%20stuck%20developer).pdf"
+              class="btn btn-ghost"
+              download="Meer_Salam_Ali_CV.pdf"
+            >
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span data-key="hero_cta2">Download CV</span>
+            </a>
+          </div>
 
-    <hr />
+          <ul class="hero-meta">
+            <li><i class="fa-solid fa-location-dot"></i> <span data-key="hero_meta_loc">Sulaimanyah, Iraq</span></li>
+            <li><i class="fa-solid fa-graduation-cap"></i> <span data-key="hero_meta_edu">BSc Computer Science</span></li>
+            <li><i class="fa-solid fa-book-open"></i> <span data-key="hero_meta_pub">Data in Brief author</span></li>
+          </ul>
+        </div>
 
-    <section id="education">
-      <div class="container">
-        <h3 data-key="education_header">🎓 EDUCATION</h3>
+        <div class="hero-photo">
+          <div class="photo-glow" aria-hidden="true"></div>
+          <div class="photo-frame">
+            <img src="profile.png" width="512" height="512" alt="Portrait of Meer Salam Ali" />
+          </div>
+          <span class="float-chip chip-a"><i class="fa-solid fa-robot"></i> AI</span>
+          <span class="float-chip chip-b"><i class="fa-solid fa-code"></i> Web</span>
+          <span class="float-chip chip-c"><i class="fa-solid fa-network-wired"></i> IT</span>
+        </div>
+      </div>
 
-        <article class="education-entry">
-          <h4 data-key="edu1_degree">Computer Science</h4>
-          <p class="dates">
-<span data-key="edu1_dates">Bachelor of Computer Science 2021 - 2025</span>
-          </p>
-          <p data-key="edu1_uni">University Of Halabja</p>
-        </article>
-        </div>
-    </section>
+      <a href="#about" class="scroll-hint" aria-label="Scroll to profile">
+        <span class="mouse"><span class="wheel"></span></span>
+      </a>
+    </section>
 
-    <hr />
+    <main>
+      <!-- ============ ABOUT ============ -->
+      <section id="about" class="section">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-num">01</span>
+            <h3 data-key="about_header">Profile</h3>
+            <p class="section-sub" data-key="about_sub">Who I am and what I do</p>
+          </header>
 
-    <section id="skills">
-      <div class="container">
-        <h3 data-key="skills_header">🔧 SKILLS & LANGUAGES</h3>
+          <div class="about-grid">
+            <div class="about-copy reveal">
+              <p data-key="about_p1">
+                Computer Science graduate, AI developer, and published researcher with experience in
+                machine learning, speech-based datasets, web application development, computer
+                repair, networking, and IT support.
+              </p>
+              <p data-key="about_p2">
+                Published a dataset paper in the Data in Brief journal focused on classifying
+                phrases and sentences (statements, questions, exclamations) based on sound pitch.
+              </p>
+              <p data-key="about_p3">
+                Former Hotel Manager at Grandiva Hotel with over four years of experience in managing
+                operations, leading teams, and overseeing all computer and administrative systems.
+              </p>
+            </div>
 
-        <h4 class="soft-skills-header" data-key="skills_core_header">
-          SOFT SKILLS
-        </h4>
-        <div class="skills-list">
-          <span data-key="skill_leadership"
-            ><i class="fas fa-handshake"></i> Leadership</span
-          >
-          <span data-key="skill_teamwork"
-            ><i class="fas fa-hands-helping"></i> Teamwork</span
-          >
-          <span data-key="skill_pr"
-            ><i class="fas fa-users"></i> Public Relations</span
-          >
-          <span data-key="skill_time_mgmt"
-            ><i class="fas fa-clock"></i> Time Management</span
-          >
-          <span data-key="skill_comm"
-            ><i class="fas fa-comments"></i> Communication</span
-          >
-          <span data-key="skill_crit_think"
-            ><i class="fas fa-brain"></i> Critical Thinking</span
-          >
-        </div>
+            <div class="stat-grid reveal">
+              <div class="stat-card">
+                <i class="fa-solid fa-briefcase"></i>
+                <strong class="counter" data-target="4">0</strong>
+                <span data-key="stat1_label">Years of experience</span>
+              </div>
+              <div class="stat-card">
+                <i class="fa-solid fa-book-open"></i>
+                <strong class="counter" data-target="1">0</strong>
+                <span data-key="stat2_label">Published paper</span>
+              </div>
+              <div class="stat-card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <strong class="counter" data-target="3">0</strong>
+                <span data-key="stat3_label">Web applications</span>
+              </div>
+              <div class="stat-card">
+                <i class="fa-solid fa-language"></i>
+                <strong class="counter" data-target="3">0</strong>
+                <span data-key="stat4_label">Languages spoken</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <h4 class="soft-skills-header" data-key="skills_tech_header">
-          TECH SKILLS
-        </h4>
-        <div class="skills-list">
-          <span data-key="skill_ml_ds"
-            ><i class="fas fa-robot"></i> Machine Learning & Dataset Development</span
-          >
-          <span data-key="skill_swhw"
-            ><i class="fas fa-code"></i> Software & Hardware Repair</span
-          >
-          <span data-key="skill_net"
-            ><i class="fas fa-network-wired"></i> Networking</span
-          >
-          <span data-key="skill_dm"
-            ><i class="fas fa-chart-line"></i> Digital Marketing</span
-          >
-          <span data-key="skill_ai"
-            ><i class="fas fa-microchip"></i> AI Development</span
-          >
-          <span data-key="skill_troubleshoot"
-            ><i class="fas fa-wrench"></i> Technical Troubleshooting</span
-          >
-          <span data-key="skill_proj_mgmt"
-            ><i class="fas fa-tasks"></i> Project Management</span
-          >
-        </div>
+      <!-- ============ EXPERIENCE ============ -->
+      <section id="experience" class="section section-alt">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-num">02</span>
+            <h3 data-key="experience_header">Experience</h3>
+            <p class="section-sub" data-key="experience_sub">Where I have worked</p>
+          </header>
 
-        <h4 class="soft-skills-header" data-key="skills_lang_header">
-          LANGUAGES
-        </h4>
-        <div class="skills-list">
-          <span data-key="lang_kurdish"
-            ><i class="fas fa-globe"></i> Kurdish</span
-          >
-          <span data-key="lang_arabic"
-            ><i class="fas fa-globe"></i> Arabic
-          </span>
-          <span data-key="lang_english"
-            ><i class="fas fa-globe"></i> English
-          </span>
-        </div>
-      </div>
-    </section>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <span class="timeline-dot is-current"></span>
+              <div class="card timeline-card">
+                <div class="card-top">
+                  <div>
+                    <h4 data-key="job0_title">Pioneer Pharma &mdash; Production Operator</h4>
+                    <p class="card-sub" data-key="job0_sub">Generic Section &mdash; Production</p>
+                  </div>
+                  <span class="tag tag-live" data-key="job0_dates">04/2026 &mdash; Present</span>
+                </div>
+                <ul class="bullets">
+                  <li data-key="job0_li1">
+                    Working as a Production Operator in the Generic production section.
+                  </li>
+                </ul>
+              </div>
+            </article>
 
-    <hr />
+            <article class="timeline-item reveal">
+              <span class="timeline-dot"></span>
+              <div class="card timeline-card">
+                <div class="card-top">
+                  <div>
+                    <h4 data-key="job1_title">Grandiva Hotel &mdash; Hotel Manager</h4>
+                    <p class="card-sub" data-key="job1_sub">Operations &amp; administrative systems</p>
+                  </div>
+                  <span class="tag" data-key="job1_dates">2022 &mdash; 2025</span>
+                </div>
+                <ul class="bullets">
+                  <li data-key="job1_li1">Managed hotel operations, reception, and administrative systems.</li>
+                  <li data-key="job1_li2">Oversaw all computer systems, POS systems, and hotel databases.</li>
+                  <li data-key="job1_li3">Provided customer service leadership and team supervision.</li>
+                  <li data-key="job1_li4">Improved workflow efficiency and guest satisfaction.</li>
+                </ul>
+              </div>
+            </article>
 
-    <section id="contact">
-      <div class="container">
-        <h3 data-key="contact_header">✉️ CONTACT</h3>
-        <p data-key="contact_p1">
-          I am eager to apply my Computer Science knowledge and professional experience to new challenges. Please connect with me!
-        </p>
-        <p class="contact-detail">
-          <i class="fas fa-phone"></i>
-          <span data-key="contact_phone">Phone:</span>
-          <a href="tel:+9647704508834">+964 770 450 8834</a> | 
-          <a href="tel:+9647508192616">+964 750 819 2616</a>
-        </p>
-        <p class="contact-detail">
-          <i class="fas fa-envelope"></i>
-          <span data-key="contact_email">Email Address:</span>
-          <a href="mailto:meersalam29@gmail.com">meersalam29@gmail.com</a>
-        </p>
-        <p class="contact-detail">
-          <i class="fas fa-map-marker-alt"></i>
-          <span data-key="contact_location">Address:</span> Sulaimanyah - Azadi St., Sulaimanyah City
-        </p>
-        <p class="contact-detail">
-          <i class="fas fa-link"></i>
-          <span data-key="contact_website">Website:</span> 
-          <a href="https://meersalamali.github.io/CVmeer/" target="_blank">https://meersalamali.github.io/CV meer/</a>
-        </p>
-      </div>
-    </section>
+            <article class="timeline-item reveal">
+              <span class="timeline-dot"></span>
+              <div class="card timeline-card">
+                <div class="card-top">
+                  <div>
+                    <h4 data-key="proj1_title">Technical &amp; Digital Solutions Support</h4>
+                    <p class="card-sub" data-key="proj1_sub">Freelance &middot; IT support &amp; networking</p>
+                  </div>
+                  <span class="tag" data-key="proj1_dates">2021 &mdash; 2025</span>
+                </div>
+                <ul class="bullets">
+                  <li data-key="proj1_li1">
+                    Repaired and maintained computer software &amp; hardware. Provided networking setup,
+                    internet configuration, and troubleshooting.
+                  </li>
+                  <li data-key="proj1_li2">
+                    Assisted with technical projects and digital solutions. Installed operating systems,
+                    antivirus tools, and network hardware.
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <footer>
-      <div class="container">
-        <p data-key="footer_text">
-          &copy; 2025 Meer Salam Ali. Built with HTML & CSS.
-        </p>
-        </div>
-    </footer>
+      <!-- ============ PROJECTS ============ -->
+      <section id="projects" class="section">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-num">03</span>
+            <h3 data-key="projects_header">Web Application Projects</h3>
+            <p class="section-sub" data-key="projects_sub">Things I have designed and built</p>
+          </header>
 
-        <script src="script.js"></script>
-  </body>
+          <div class="project-grid">
+            <article class="card project-card reveal" style="--accent: #2563eb">
+              <div class="project-icon"><i class="fa-solid fa-hotel"></i></div>
+              <h4 data-key="projA_title">Hotel Management System</h4>
+              <p class="card-sub" data-key="projA_sub">Web Application</p>
+              <ul class="bullets">
+                <li data-key="projA_li1">
+                  Developed a web-based hotel management system to manage rooms, reservations,
+                  customers, employees, and hotel operations.
+                </li>
+                <li data-key="projA_li2">
+                  Designed administrative dashboards and database-driven management features.
+                </li>
+              </ul>
+              <div class="chip-row">
+                <span class="mini-chip">Web App</span>
+                <span class="mini-chip">Database</span>
+                <span class="mini-chip">Dashboard</span>
+              </div>
+            </article>
+
+            <article class="card project-card reveal" style="--accent: #0e9f6e">
+              <div class="project-icon"><i class="fa-solid fa-soap"></i></div>
+              <h4 data-key="projB_title">Carpet Washing Management System</h4>
+              <p class="card-sub" data-key="projB_sub">Web Application</p>
+              <ul class="bullets">
+                <li data-key="projB_li1">
+                  Developed a web application for managing carpet washing orders and customer
+                  information.
+                </li>
+                <li data-key="projB_li2">
+                  Implemented order tracking, customer records, delivery management, pricing,
+                  payments, and workflow monitoring.
+                </li>
+              </ul>
+              <div class="chip-row">
+                <span class="mini-chip">Orders</span>
+                <span class="mini-chip">Payments</span>
+                <span class="mini-chip">CRM</span>
+              </div>
+            </article>
+
+            <article class="card project-card reveal" style="--accent: #7c3aed">
+              <div class="project-icon"><i class="fa-solid fa-draw-polygon"></i></div>
+              <h4 data-key="projC_title">Geometric Area Calculator</h4>
+              <p class="card-sub" data-key="projC_sub">Web Application</p>
+              <ul class="bullets">
+                <li data-key="projC_li1">
+                  Developed a web application for calculating geometric areas for architectural and
+                  engineering applications.
+                </li>
+                <li data-key="projC_li2">
+                  Implemented calculations for different geometric shapes with a simple and
+                  user-friendly interface.
+                </li>
+              </ul>
+              <div class="chip-row">
+                <span class="mini-chip">JavaScript</span>
+                <span class="mini-chip">Engineering</span>
+                <span class="mini-chip">UI</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PUBLICATIONS ============ -->
+      <section id="publications" class="section section-alt">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-num">04</span>
+            <h3 data-key="publications_header">Publications</h3>
+            <p class="section-sub" data-key="publications_sub">Peer-reviewed research output</p>
+          </header>
+
+          <article class="card publication-card reveal">
+            <div class="pub-badge"><i class="fa-solid fa-file-lines"></i></div>
+            <div class="pub-body">
+              <span class="tag tag-soft" data-key="pub1_journal">Data in Brief Journal &middot; 2024</span>
+              <h4 data-key="pub1_title">
+                A Dataset for Classifying Phrases and Sentences Into Statements, Questions, or
+                Exclamations Based on Sound Pitch
+              </h4>
+              <ul class="bullets">
+                <li data-key="pub1_li1">Developed and published a unique linguistic and audio-based dataset.</li>
+                <li data-key="pub1_li2">
+                  Focused on speech intonation, semantic labeling, and machine learning preparation.
+                </li>
+                <li data-key="pub1_li3">
+                  Contributed to research in NLP, sound analysis, and AI classification.
+                </li>
+              </ul>
+              <blockquote class="citation">
+                <span class="citation-label" data-key="pub1_citation_label">Citation</span>
+                <span data-key="pub1_citation" dir="ltr">
+                  M. S. Ali, "A dataset for classifying phrases and sentences into statements,
+                  questions, or exclamations based on sound pitch," Data in Brief, 2024.
+                </span>
+              </blockquote>
+              <a class="btn btn-primary btn-sm" href="https://doi.org/10.1016/j.dib.2025.111826" target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span data-key="pub1_link">Read the publication</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section id="education" class="section">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-num">05</span>
+            <h3 data-key="education_header">Education</h3>
+            <p class="section-sub" data-key="education_sub">Academic background</p>
+          </header>
+
+          <article class="card education-card reveal">
+            <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="edu-body">
+              <h4 data-key="edu1_uni">University of Halabja</h4>
+              <p class="card-sub" data-key="edu1_degree">Bachelor of Computer Science</p>
+            </div>
+            <span class="tag" data-key="edu1_dates">2021 &mdash; 2025</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section id="skills" class="section section-alt">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-num">06</span>
+            <h3 data-key="skills_header">Skills &amp; Languages</h3>
+            <p class="section-sub" data-key="skills_sub">What I bring to a team</p>
+          </header>
+
+          <div class="skills-layout">
+            <div class="card skill-block reveal">
+              <h4 class="block-title">
+                <i class="fa-solid fa-microchip"></i>
+                <span data-key="skills_tech_header">Tech Skills</span>
+              </h4>
+              <div class="chip-cloud">
+                <span class="chip"><i class="fa-solid fa-brain"></i><span data-key="skill_ml_ds">Machine Learning &amp; Dataset Development</span></span>
+                <span class="chip"><i class="fa-solid fa-robot"></i><span data-key="skill_ai">AI Development</span></span>
+                <span class="chip"><i class="fa-solid fa-code"></i><span data-key="skill_web">Web Development</span></span>
+                <span class="chip"><i class="fa-solid fa-screwdriver-wrench"></i><span data-key="skill_swhw">Software &amp; Hardware Repair</span></span>
+                <span class="chip"><i class="fa-solid fa-network-wired"></i><span data-key="skill_net">Networking</span></span>
+                <span class="chip"><i class="fa-solid fa-bullhorn"></i><span data-key="skill_dm">Digital Marketing</span></span>
+                <span class="chip"><i class="fa-solid fa-gear"></i><span data-key="skill_troubleshoot">Technical Troubleshooting</span></span>
+                <span class="chip"><i class="fa-solid fa-list-check"></i><span data-key="skill_proj_mgmt">Project Management</span></span>
+              </div>
+            </div>
+
+            <div class="card skill-block reveal">
+              <h4 class="block-title">
+                <i class="fa-solid fa-handshake"></i>
+                <span data-key="skills_core_header">Soft Skills</span>
+              </h4>
+              <div class="chip-cloud">
+                <span class="chip"><i class="fa-solid fa-flag"></i><span data-key="skill_leadership">Leadership</span></span>
+                <span class="chip"><i class="fa-solid fa-people-group"></i><span data-key="skill_teamwork">Teamwork</span></span>
+                <span class="chip"><i class="fa-solid fa-users"></i><span data-key="skill_pr">Public Relations</span></span>
+                <span class="chip"><i class="fa-solid fa-clock"></i><span data-key="skill_time_mgmt">Time Management</span></span>
+                <span class="chip"><i class="fa-solid fa-comments"></i><span data-key="skill_comm">Communication</span></span>
+                <span class="chip"><i class="fa-solid fa-lightbulb"></i><span data-key="skill_crit_think">Critical Thinking</span></span>
+              </div>
+            </div>
+
+            <div class="card skill-block reveal">
+              <h4 class="block-title">
+                <i class="fa-solid fa-globe"></i>
+                <span data-key="skills_lang_header">Languages</span>
+              </h4>
+              <div class="lang-list">
+                <div class="lang-row">
+                  <div class="lang-top">
+                    <span data-key="lang_kurdish">Kurdish</span>
+                    <em data-key="level_pro">Professional</em>
+                  </div>
+                  <div class="meter"><span style="--level: 100%"></span></div>
+                </div>
+                <div class="lang-row">
+                  <div class="lang-top">
+                    <span data-key="lang_arabic">Arabic</span>
+                    <em data-key="level_pro2">Professional</em>
+                  </div>
+                  <div class="meter"><span style="--level: 90%"></span></div>
+                </div>
+                <div class="lang-row">
+                  <div class="lang-top">
+                    <span data-key="lang_english">English</span>
+                    <em data-key="level_good">Good</em>
+                  </div>
+                  <div class="meter"><span style="--level: 70%"></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section id="contact" class="section">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="section-num">07</span>
+            <h3 data-key="contact_header">Contact</h3>
+            <p class="section-sub" data-key="contact_sub">Let us build something together</p>
+          </header>
+
+          <p class="contact-lead reveal" data-key="contact_p1">
+            I am eager to apply my Computer Science knowledge and professional experience to new
+            challenges. Please connect with me!
+          </p>
+
+          <div class="contact-grid">
+            <a class="card contact-card reveal" href="tel:+9647704508834">
+              <i class="fa-solid fa-phone"></i>
+              <span class="contact-label" data-key="contact_phone">Phone</span>
+              <strong dir="ltr">+964 770 450 8834</strong>
+              <small dir="ltr">+964 750 819 2616</small>
+            </a>
+
+            <a class="card contact-card reveal" href="mailto:meersalam29@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <span class="contact-label" data-key="contact_email">Email</span>
+              <strong dir="ltr">meersalam29@gmail.com</strong>
+            </a>
+
+            <div class="card contact-card reveal">
+              <i class="fa-solid fa-location-dot"></i>
+              <span class="contact-label" data-key="contact_location">Address</span>
+              <strong data-key="contact_address">Azadi St., Sulaimanyah City</strong>
+              <small data-key="contact_country">Kurdistan Region, Iraq</small>
+            </div>
+
+            <a class="card contact-card reveal" href="https://meersalamali.github.io/CV_meer/" target="_blank" rel="noopener">
+              <i class="fa-solid fa-link"></i>
+              <span class="contact-label" data-key="contact_website">Website</span>
+              <strong dir="ltr">meersalamali.github.io</strong>
+            </a>
+          </div>
+
+          <div class="contact-cta reveal">
+            <div>
+              <h4 data-key="cta_title">Have a project or a role in mind?</h4>
+              <p data-key="cta_text">I usually reply within one working day.</p>
+            </div>
+            <a href="mailto:meersalam29@gmail.com" class="btn btn-light">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span data-key="cta_button">Send an email</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">MS</span>
+          <div>
+            <strong data-key="brand_name">Meer Salam Ali</strong>
+            <small data-key="footer_tag">Computer Science &middot; AI &amp; Web Development</small>
+          </div>
+        </div>
+
+        <nav class="footer-links">
+          <a href="#about" data-key="nav_profile">Profile</a>
+          <a href="#experience" data-key="nav_experience">Experience</a>
+          <a href="#projects" data-key="nav_projects">Projects</a>
+          <a href="#publications" data-key="nav_publications">Publications</a>
+          <a href="#contact" data-key="nav_contact">Contact</a>
+        </nav>
+
+        <p class="footer-note" data-key="footer_text">&copy; 2026 Meer Salam Ali. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
 </html>
