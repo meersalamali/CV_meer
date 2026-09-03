@@ -23,7 +23,7 @@
       nav_skills: "Skills",
       nav_contact: "Contact",
 
-      hero_badge: "Open to new opportunities",
+      hero_badge: "Open to new opportunities (With Part Time)",
       hero_first: "MEER SALAM",
       hero_last: "ALI",
       hero_title: "Computer Science · AI & Web Application Developer",
@@ -165,7 +165,7 @@
       nav_skills: "تواناکان",
       nav_contact: "پەیوەندی",
 
-      hero_badge: "ئامادەم بۆ هەلی نوێ",
+      hero_badge: "(بەشێوازی نیوەی کات) ئامادەم بۆ هەلی نوێ",
       hero_first: "میر سەلام",
       hero_last: "عەلی",
       hero_title: "زانستی کۆمپیوتەر · پەرەپێدەری AI و ئەپی وێب",
@@ -305,7 +305,7 @@
       nav_skills: "المهارات",
       nav_contact: "اتصل بي",
 
-      hero_badge: "متاح لفرص عمل جديدة",
+      hero_badge: "(بدوام جزئي)متاح لفرص عمل جديدة",
       hero_first: "مير سلام",
       hero_last: "علي",
       hero_title: "علوم الحاسوب · مطوّر ذكاء اصطناعي وتطبيقات ويب",
