@@ -215,20 +215,27 @@ ul {
   color: var(--text);
 }
 
+/* The logo is a circular crop of the site owner's photo. The gradient stays as
+   a same-shaped fallback for the moment before the image decodes. */
 .brand-mark {
   width: 42px;
   height: 42px;
-  display: grid;
-  place-items: center;
-  border-radius: 13px;
+  border-radius: 50%;
+  object-fit: cover;
   background: var(--grad-brand);
-  color: #fff;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
-  box-shadow: 0 8px 20px -8px var(--brand);
+  box-shadow: 0 8px 20px -8px var(--brand), 0 0 0 2px rgba(255, 255, 255, 0.5);
   flex-shrink: 0;
+  transition: box-shadow 0.3s ease, transform 0.25s ease;
+}
+
+/* A white ring disappears once the nav turns opaque, so switch it to brand. */
+.site-nav.is-stuck .brand-mark {
+  box-shadow: 0 8px 20px -8px var(--brand),
+    0 0 0 2px color-mix(in srgb, var(--brand) 40%, transparent);
+}
+
+.brand:hover .brand-mark {
+  transform: scale(1.06);
 }
 
 .brand-text {
